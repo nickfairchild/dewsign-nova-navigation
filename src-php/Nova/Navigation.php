@@ -60,6 +60,7 @@ class Navigation extends Repeater
                 return $this->label;
             }),
             Hidden::make('Zone')->value(static::$zone),
+            Boolean::make('Mega Menu'),
             Polymorphic::make('Type')->types($request, $this->types($request)),
             MorphMany::make(__('Items'), 'navigations', static::class),
         ];
